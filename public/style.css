@@ -1,0 +1,140 @@
+
+#home{
+    height:100vh;
+    background-image: url(./images/blog-background3.png);
+    background-size:cover;
+}
+
+.navigation{
+    color:black;
+    padding:5px;
+    font-weight: 800;
+    font-family: 'Gowun Batang', serif;
+    font-size: 1.2rem;
+}
+.navigation:hover{
+    transform:scale(1.5);
+    color:antiquewhite;
+    background-color: black;
+    transition: 0.5s;
+    letter-spacing: 2px;
+    border-radius: 5px;
+}
+.title{
+    display:flex;
+    justify-content: center;
+    height:50vh;
+    font-size:5rem;
+    align-items: center;
+    font-family: 'WindSong', cursive;
+    color: black;
+    font-weight: bolder;
+}
+
+.button{
+    transition: 0.4s;
+    border-radius: 50%;     
+}
+.button:hover{
+    transform:scale(1.1);
+}
+.create{
+    font-family: 'Gowun Batang', serif;
+    letter-spacing: 3px;
+    padding:10px;
+    font-weight: 800;
+}
+.create:hover{
+    transition:0.3s;
+    letter-spacing: 6px;
+}
+.top{
+    display:flex;
+    justify-content:center;
+}
+.logo{
+    position: relative;
+    margin-top: 10px;
+    margin-right: 50px;
+    height:80px;
+    width:80px;
+    border-radius: 50%;
+}
+
+.formdiv{
+    display:flex;
+    flex-direction:row;
+    height:50vh;
+    justify-content:center;
+    align-items: center;
+    background-color: antiquewhite;
+    margin-top: 100px;
+    border-radius: 20px;;
+}
+.namelabel{
+    font-size: 1.5rem;
+    font-weight: 1000;
+    font-family: 'Comic Neue', cursive;
+}
+.nameinput{
+    width:600px;
+    height:50px;
+    border-radius:5px;
+    border: 1px solid black;
+    text-align:justify;
+    font-size: 1.5rem;
+    font-family: 'Comic Neue', cursive;
+    font-weight: 500;
+    padding-left:20px;
+    margin-left:20px;
+    margin-bottom: 20px;
+}
+.titleinput{
+    width:600px;
+    height:50px;
+    border-radius:5px;
+    border: 1px solid black;
+    text-align:justify;
+    font-size: 1.5rem;
+    font-family: 'Comic Neue', cursive;
+    font-weight: 500;
+    padding-left:20px;
+    margin-left:39px;
+    margin-bottom: 20px;
+}
+.titleinput:focus{
+    border-width: 3px;;
+}
+.nameinput:focus{
+    border-width: 3px;;
+}
+.blog{
+    width:1000px;
+    height:800px;
+    border-radius:5px;
+    border: 1px solid black;
+    font-size: 1.5rem;
+    font-family: 'Comic Neue', cursive;
+    font-weight: 500;
+    padding:20px;
+    margin-bottom: 20px;
+}
+.blogdiv{
+    display:flex;
+    flex-direction:row;
+    height:100vh;
+    justify-content:center;
+    align-items:start;
+    margin-top: 100px;
+    border-radius: 20px;
+}
+
+#blogspage{
+    height:100%;
+    background:linear-gradient(to bottom,#76453B,#341E05);
+}
+
+.eachblog{
+    border-radius: 5px;
+}
+
