@@ -1,8 +1,12 @@
-
+body{
+    background-color:transparent;
+}
 #home{
     height:100vh;
+    width:100%;
     background-image: url(./images/blog-background3.png);
     background-size:cover;
+    background-attachment: fixed;
 }
 
 .navigation{
@@ -29,24 +33,26 @@
     font-family: 'WindSong', cursive;
     color: black;
     font-weight: bolder;
+    animation-name: textani;
+    animation-duration: 1.5s;
 }
-
-.button{
-    transition: 0.4s;
-    border-radius: 50%;     
+.title-l{
+    animation-name: textani-l;
+    animation-duration: 2s;
+    margin:1.5rem;
 }
-.button:hover{
-    transform:scale(1.1);
+.title-r{
+    animation-name: textani-r;
+    animation-duration: 2s;
+    margin:1.5rem;
 }
-.create{
-    font-family: 'Gowun Batang', serif;
-    letter-spacing: 3px;
-    padding:10px;
-    font-weight: 800;
+@keyframes textani-l {
+    from{transform: translateX(300px);}
+    to{transform: translateX(-0px);}
 }
-.create:hover{
-    transition:0.3s;
-    letter-spacing: 6px;
+@keyframes textani-r {
+    from{transform: translateX(-300px);}
+    to{transform: translateX(0px);}
 }
 .top{
     display:flex;
@@ -60,81 +66,172 @@
     width:80px;
     border-radius: 50%;
 }
-
-.formdiv{
+form{
     display:flex;
-    flex-direction:row;
-    height:50vh;
-    justify-content:center;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    background-color: antiquewhite;
-    margin-top: 100px;
-    border-radius: 20px;;
-}
-.namelabel{
-    font-size: 1.5rem;
-    font-weight: 1000;
-    font-family: 'Comic Neue', cursive;
-}
-.nameinput{
-    width:600px;
-    height:50px;
-    border-radius:5px;
-    border: 1px solid black;
-    text-align:justify;
-    font-size: 1.5rem;
-    font-family: 'Comic Neue', cursive;
-    font-weight: 500;
-    padding-left:20px;
-    margin-left:20px;
-    margin-bottom: 20px;
-}
-.titleinput{
-    width:600px;
-    height:50px;
-    border-radius:5px;
-    border: 1px solid black;
-    text-align:justify;
-    font-size: 1.5rem;
-    font-family: 'Comic Neue', cursive;
-    font-weight: 500;
-    padding-left:20px;
-    margin-left:39px;
-    margin-bottom: 20px;
-}
-.titleinput:focus{
-    border-width: 3px;;
-}
-.nameinput:focus{
-    border-width: 3px;;
-}
-.blog{
-    width:1000px;
-    height:800px;
-    border-radius:5px;
-    border: 1px solid black;
-    font-size: 1.5rem;
-    font-family: 'Comic Neue', cursive;
-    font-weight: 500;
-    padding:20px;
-    margin-bottom: 20px;
-}
-.blogdiv{
-    display:flex;
-    flex-direction:row;
-    height:100vh;
-    justify-content:center;
-    align-items:start;
-    margin-top: 100px;
-    border-radius: 20px;
+    gap:20px;
+    background-color:#F1FAFF ;
 }
 
-#blogspage{
-    height:100%;
-    background:linear-gradient(to bottom,#76453B,#341E05);
+
+
+/* tools */
+input {
+    border: 2px solid transparent;
+    width: 15em;
+    height: 2.5em;
+    padding-left: 0.8em;
+    outline: none;
+    border-bottom: 2px solid rgb(39, 38, 38);
+    overflow: hidden;
+    background-color: #FBFFF4;
+    border-radius: 10px;
+    border-bottom-right-radius: 0px;
+    transition: all 0.5s;
+  }
+  
+  input:hover,
+  input:focus {
+    border: 2px solid #4A9DEC;
+    box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
+    background-color: white;
+  }
+textarea{
+    border: 1px solid gray;
+    padding: 0.8em;
+    outline: none;
+    overflow: hidden;
+    background-color: #FBFFF4;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+textarea:hover,
+  textarea:focus {
+    border: 1px solid #4A9DEC;
+    box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
+    background-color: white;
+  }
+  
+  
+/* for posts */
+.post-container,.post-container>ul{
+    background-color: #DBD3AD;
+    backdrop-filter: blur(0.5);
+    display:flex;
+    flex-direction: column;
+    
+}
+
+li{
+    list-style-type: none;
 }
 
 .eachblog{
-    border-radius: 5px;
+
+    background-color: #f6f6f6;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin:50px;
+    padding:50px;
+    border-radius: 50px;
 }
 
+.post-title{
+    font-size: large;
+    font-family: "Raleway", sans-serif;
+    font-weight:bolder;
+    text-transform: capitalize;
+}
+
+.post-content{
+    font-size:larger;
+    font-family: "Assistant", sans-serif;  
+    text-align: justify;
+}
+.btn-div{
+    width:100%;
+    display:flex;
+}
+.hidden-form{
+    display:flex;
+    flex-direction: row;
+    background-color: transparent;
+}
+
+/* tools */
+/* button */
+.create-btn-div{
+    display: flex;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+}
+.edit-button-div{
+    display: flex;
+    width:100%;
+    justify-content:start;
+}
+.edit-button{
+    height: 2.5rem;
+    width: 7rem;
+    position: relative;
+    margin-right:2rem;
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid #1b1a1a;
+    overflow: hidden;
+    border-radius: 30px;
+    color: #1a1919;
+    transition: all 0.5s ease-in-out;
+}
+.edit-button:hover {
+    color: #fff;
+    border: none;
+}
+.button {
+    height: 3.5rem;
+    width: 14rem;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid #1b1a1a;
+    overflow: hidden;
+    border-radius: 30px;
+    color: #1a1919;
+    transition: all 0.5s ease-in-out;
+}
+
+.btn-txt {
+    font-weight: 600;
+    letter-spacing: 4px;
+    position: relative; 
+    z-index: 10;
+}
+
+.type1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+    background-color: #202020;
+    border-radius: 30px;
+    visibility: hidden;
+    height: 10px;
+    width: 10px;
+    z-index: 1; /* Lower than the text */
+}
+
+.button:hover {
+    color: #fff;
+    border: none;
+}
+
+.type1:hover::after {
+    visibility: visible;
+    transform: scale(100) translateX(2px);
+}

@@ -11,14 +11,38 @@
 <body>
     <div class="container">
         <div class="blogdiv">
-            <form action="/add" method="post">
-                <label class="namelabel" for="Name">Name :</label>
-                <input class="nameinput" type="text" name="Name" spellcheck="false" required><br/>
-                <label class="namelabel" for="Title">Title :</label>
-                <input class="titleinput" type="text" name="Title" required>
-                <textarea class="blog" type="text" name="blog" rows="200" cols="50"></textarea>
-                <input class="btn btn-primary" type="submit">
-            </form>
+            <% if(locals.blog) {%>
+                <form action="/edited" method="post">
+                    <input class="" type="hidden" name="id" value="<%= blog[0].id %>"> 
+                    <div>
+                        <input class="nameinput" placeholder="Name" value="<%= blog[0].author %>" type="text" name="Name" spellcheck="false" required><br/>
+                    </div>
+                    <div>
+                        <input class="titleinput" placeholder="Title" value="<%= blog[0].title %>" type="text" name="Title" required>
+                    </div>
+                    <div>
+                        <textarea class="blog" type="text" name="blog" rows="20" cols="100"><%= blog[0].post %></textarea>
+                    </div>
+                    <div>
+                        <input class="btn btn-primary" type="submit">
+                    </div>
+                </form>
+            <% }else{ %>
+                <form action="/add" method="post">
+                    <div>
+                        <input class="nameinput" placeholder="Name" type="text" name="Name" spellcheck="false" required><br/>
+                    </div>
+                    <div>
+                        <input class="titleinput" placeholder="Title" type="text" name="Title" required>
+                    </div>
+                    <div>
+                        <textarea class="blog" type="text" name="blog" rows="20" cols="100"></textarea>
+                    </div>
+                    <div>
+                        <input class="btn btn-primary" type="submit">
+                    </div>
+                </form>
+            <% } %>
         </div>
     </div>
 </body>
